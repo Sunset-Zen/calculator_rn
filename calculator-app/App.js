@@ -43,7 +43,7 @@ export default function App() {
     let opString = "";
     operation == 'divide' ? opString = '/' : operation == 'multiply' ? opString = 'x' : operation == 'add' ? opString = '+' : operation == 'subtract' ? opString = '-': opString = 'Nan';
 
-    let tempEquation = `${expression.current[0]} ${opString}`;
+    let tempEquation = `${expression.current[0]} ${opString} `;
     setEquationExp([tempEquation]);
 
     // If pad count > 0 (pressed /) and you havent entered the second expression (display[1] is empty) -> pause until you enter second expression
@@ -71,7 +71,7 @@ export default function App() {
     let opString = "";
     operation == 'divide' ? opString = '/' : operation == 'multiply' ? opString = 'x' : operation == 'add' ? opString = '+' : operation == 'subtract' ? opString = '-': opString = 'Nan';
 
-    let tempEquation = `${expression.current[0]} ${opString}`;
+    let tempEquation = `${expression.current[0]} ${opString} `;
     setEquationExp([tempEquation]);
 
     // ( Debug )
@@ -98,7 +98,7 @@ export default function App() {
     let opString = "";
     operation == 'divide' ? opString = '/' : operation == 'multiply' ? opString = 'x' : operation == 'add' ? opString = '+' : operation == 'subtract' ? opString = '-': opString = 'Nan';
 
-    let tempEquation = `${expression.current[0]} ${opString}`;
+    let tempEquation = `${expression.current[0]} ${opString} `;
     setEquationExp([tempEquation]);
 
     // ( Debug )
@@ -124,7 +124,7 @@ export default function App() {
     let opString = "";
     operation == 'divide' ? opString = '/' : operation == 'multiply' ? opString = 'x' : operation == 'add' ? opString = '+' : operation == 'subtract' ? opString = '-': opString = 'Nan';
 
-    equation.current = `${expression.current[0]} ${opString}`;
+    equation.current = `${expression.current[0]} ${opString} `;
     setEquationExp(equation.current);
 
     // ( Debug )
@@ -256,7 +256,7 @@ export default function App() {
       // let tempA = `${parseFloat(string, 10)}`
       // let tempB = equation.current;
       // equation.current += ` ${parseFloat(expression.current[expLength - 1])}`
-      setEquationExp(prev => prev += ` ${parseFloat(string, 10)}`);
+      setEquationExp(prev => prev += `${parseFloat(string, 10)}`);
       padCount.current++;
       console.log(`Second Expression: \t ${expression.current[expLength - 1]}`)
       console.log(`Current Equation: \t ${equation.current}`)
